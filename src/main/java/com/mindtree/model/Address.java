@@ -3,7 +3,6 @@ package com.mindtree.model;
 import java.util.UUID;
 
 public class Address {
-
 	String id;
 	String streetName;
 	String city;

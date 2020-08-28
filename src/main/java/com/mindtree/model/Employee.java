@@ -1,40 +1,27 @@
 package com.mindtree.model;
 
-import java.util.UUID;
-
 import javax.validation.constraints.NotNull;
 
 public class Employee {
 
-	String id;
+	private Integer id;
+	@NotNull(message = "Name cannot be null")
+	private String name;
 	@NotNull
-	String name;
-	@NotNull
-	String gender;
-	@NotNull
-	String DOB;
-	String department;
-	Address address;
+	private String gender;
+	private String DOB;
+	private String department;
+	private Address address;
 
 	public Employee() {
-		this.id = UUID.randomUUID().toString();
+		this.id = 1;
 	}
 
-	public Employee(String id, String name, String gender, String dOB, String department, Address address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		DOB = dOB;
-		this.department = department;
-		this.address = address;
-	}
-
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
